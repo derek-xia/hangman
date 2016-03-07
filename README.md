@@ -1,0 +1,2 @@
+# hangman
+first, simple project
