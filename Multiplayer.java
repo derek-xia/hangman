@@ -5,9 +5,18 @@ class Multiplayer extends Singleplayer{
         System.out.println("Welcome to Hangman. Please enter a word:");
         String word = sc.nextLine();
         System.out.println("Now enter the number of lives:");
-        int lives = sc.nextInt();
-
-        Integer win = this.guess(word);
+        int maxlives = sc.nextInt();
+        System.out.println("\n"+"\n"+"\n"+"\n"+"\n"+"\n"+"\n"+"\n"+"\n"+"\n"+"\n"+"\n"+"\n"+"\n"+"\n"+"\n"+"\n"+"\n"+"\n"+"\n"+"\n"+"\n"+"\n"+"\n"+"\n"+"\n"+"\n"+"\n"+
+                "     _    _\n" +
+                "    (o)--(o)\n" +
+                "   /.______.\\\n" +
+                "   \\________/\n" +
+                "  ./        \\.\n" +
+                " ( .        , )\n" +
+                "  \\ \\_\\\\//_/ /\n" +
+                "   ~~  ~~  ~~"+
+                "\n"+"\n");
+        Integer win = this.guess(word,maxlives);
 
         switch (win) {
             case 1:
