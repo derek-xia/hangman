@@ -11,9 +11,9 @@ class Singleplayer {
 
         System.out.println("Welcome to Hangman. Please enter a guess:");
         Random rng = new Random();
-        String[] words = checkWords();
+        String[] words = readWordList();
         String word = words[rng.nextInt(words.length)];
-        Integer win = this.guess(word,maxlives);
+        Integer win = this.checkGuesses(word,maxlives);
 
         switch (win) {
             case 1:
@@ -25,7 +25,7 @@ class Singleplayer {
         }
     }
 
-    public String[] checkWords(){
+    public static String[] readWordList(){
 
         try{
             FileReader filereader = new FileReader(new File("WordList.txt"));
@@ -56,10 +56,10 @@ class Singleplayer {
 
     }
 
-    public final Integer guess(String w,int lives){
+    public final Integer checkGuesses(String w,int lives){
         int WinLose = 2;
         //default lose
-        lives = maxlives;
+        //lives = maxlives;
 
         char[] SelectedWord = w.toCharArray(); //
         char[] InputtedWord; //string to print out
