@@ -16,14 +16,14 @@ class Multiplayer extends Singleplayer{
                 "  \\ \\_\\\\//_/ /\n" +
                 "   ~~  ~~  ~~"+
                 "\n"+"\n");
-        Integer win = this.guess(word,maxlives);
+        Integer win = this.checkGuesses(word,maxlives);
 
         switch (win) {
             case 1:
                 System.out.println("Congratulations, you won! The word was: " + word);
                 break;
             case 2:
-                System.out.println("Sorry, you lost. The word was: " + word);
+                System.out.println("You're bad. The word was: " + word);
                 break;
         }
     }
